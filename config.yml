@@ -1,0 +1,16 @@
+# Server configurations
+server:
+  host: "localhost"
+  port: 8000
+  timeout: 3000
+
+# Provider Configuration
+providers:
+  google:
+    clientId: ${GOOGLE_CLIENT_ID}
+    clientSecret: ${GOOGLE_CLIENT_SECRET}
+    callbackUrl: "http://localhost:3000/auth/google/callback"
+  github:
+    clientId: ${GITHUB_CLIENT_ID}
+    clientSecret: ${GITHUB_CLIENT_SECRET}
+    callbackUrl: "http://localhost:3000/auth/github/callback"

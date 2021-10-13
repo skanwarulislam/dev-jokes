@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="jum botron">
+    <img src="{{.User.AvatarURL}}" class="avatar bg-light rounded-circle text-white p-1" alt="Avatar" />
+    Welcome {{.User.NickName}}
+    <br>
+    <a href="/logout/{{.Provider}}" class="btn btn-danger"><span class="fa fa-{{.Provider}}"></span> Logout</a>
+    <div class="card text-center">
+      <div class="card-header">
+        Joke of the day
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Joke of the day</h5>
+        <p class="card-text">{{.Joke.Value}}}</p>
+        <a href="/auth/{{.Provider}}" class="btn btn-primary">Go somewhere</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
+  </div>
+</div>
