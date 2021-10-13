@@ -24,7 +24,7 @@ func main() {
 	gothic.Store = store
 
 	var cfg config.Config
-	config.ReadFile(&cfg)
+	config.ReadFile(&cfg, "config.yml")
 
 	goth.UseProviders(
 		google.New(cfg.Providers.Google.ClientId, cfg.Providers.Google.ClientSecret, cfg.Providers.Google.CallbackUrl, "email", "profile"),

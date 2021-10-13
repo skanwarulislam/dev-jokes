@@ -11,5 +11,5 @@ func TestReadFile(t *testing.T) {
 	os.Setenv("GITHUB_CLIENT_ID", "1")
 	os.Setenv("GITHUB_CLIENT_SECRET", "1")
 	var cfg Config
-	ReadFile(&cfg)
+	ReadFile(&cfg, "../config.yml")
 }

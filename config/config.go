@@ -26,9 +26,9 @@ type Config struct {
 	} `yaml:"server"`
 }
 
-func ReadFile(cfg *Config) {
+func ReadFile(cfg *Config, filePath string) {
 	log.Println("Loading config file")
-	confContent, err := ioutil.ReadFile("config.yml")
+	confContent, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		log.Fatal(err)
 	}

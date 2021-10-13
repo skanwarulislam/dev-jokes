@@ -27,7 +27,7 @@ func DoCallback(res http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 	provider := strings.Split(req.URL.Path, "/")[2]
-	log.Println("User is logged in using :"+provider)
+	log.Println("User is logged in using :" + provider)
 	data := &models.Data{
 		User:        user,
 		CompanyName: "InterestingJokes AS",
