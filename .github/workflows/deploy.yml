@@ -15,7 +15,7 @@ env:
   ECR_REPOSITORY: dev-jokes
   ECS_SERVICE: dev-jokes
   ECS_CLUSTER: dev-jokes-cluster
-  ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION 
+  ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION
   CONTAINER_NAME: dev-jokes
 
 
@@ -23,6 +23,10 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: write
+      id-token: write
     environment: production
 
     steps:
