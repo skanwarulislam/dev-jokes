@@ -16,6 +16,17 @@ func DoAuth(res http.ResponseWriter, req *http.Request) {
 	gothic.BeginAuthHandler(res, req)
 }
 
+func DoHealthCheck(res http.ResponseWriter, req *http.Request) {
+	status := "{" +
+		"\"Status\" : \"Ok\"" +
+		"}"
+	res.WriteHeader(http.StatusOK)
+	_, err := res.Write([]byte(status))
+	if err != nil {
+		log.Fatal(err)
+	}
+}
+
 func DoCallback(res http.ResponseWriter, req *http.Request) {
 	user, err := gothic.CompleteUserAuth(res, req)
 	if err != nil {
