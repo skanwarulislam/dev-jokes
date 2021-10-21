@@ -9,8 +9,8 @@ providers:
   google:
     clientId: ${GOOGLE_CLIENT_ID}
     clientSecret: ${GOOGLE_CLIENT_SECRET}
-    callbackUrl: "http://localhost:3000/auth/google/callback"
+    callbackUrl: ${GOOGLE_CALLBACK_URL}
   github:
     clientId: ${GITHUB_CLIENT_ID}
     clientSecret: ${GITHUB_CLIENT_SECRET}
-    callbackUrl: "http://localhost:3000/auth/github/callback"
+    callbackUrl: ${GITHUB_CALLBACK_URL}
