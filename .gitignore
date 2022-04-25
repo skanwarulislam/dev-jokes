@@ -16,3 +16,9 @@
 
 #IntellJ files
 .idea/
+
+#.env files
+.env
+
+# app directory 
+app
