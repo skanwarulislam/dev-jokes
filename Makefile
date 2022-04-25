@@ -26,6 +26,9 @@ app/server: app **/*.go
 app/local: app **/*.go
 	go build -ldflags '-linkmode=external' -o ./app/server .
 
+deploy: docker-compose.yml ./app/server install app/resources app/config app/local
+	docker-compose up --build
+
 clean:
 	rm -rf ./app ./main
 
